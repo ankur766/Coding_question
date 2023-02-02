@@ -1,27 +1,23 @@
 class Solution {
 public:
     int differenceOfSum(vector<int>& nums) {
-        
-      int sum_of_original_vect=accumulate(nums.begin(), nums.end(), 0);
-        
-        int sum_of_after_extract_digit=0;
+       vector<int>num2;
 
         for(int i=0;i<nums.size();i++)
 
         {
-            
-            while(nums[i]>0)
+            int temp_var=nums[i];
+            while(temp_var>0)
         
         {
-            int extract_digit= nums[i]%10;
-             nums[i] /=10;
-                sum_of_after_extract_digit+=extract_digit;
-            
+            int extract_digit= temp_var%10;
+             temp_var /=10;
+            num2.push_back(extract_digit);
         }
             
         }
     
             
-        return abs(sum_of_after_extract_digit-sum_of_original_vect);
+        return abs(accumulate(nums.begin(), nums.end(), 0)-accumulate(num2.begin(), num2.end(), 0));
     }
 };
