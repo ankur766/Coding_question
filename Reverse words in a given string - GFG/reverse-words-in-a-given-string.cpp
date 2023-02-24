@@ -7,8 +7,12 @@ using namespace std;
 class Solution
 {
     public:
-    //Function to reverse words in a given string.
+    //Function to reverse words in a given string. swap st[i],str[n]
+    
+    
     string reverseWords(string s) 
+    
+    
     { 
         // code here 
         reverse(s.begin(),s.end());
@@ -24,7 +28,10 @@ class Solution
         }
         s.pop_back();
         return s;
-    } 
+    
+    
+}
+    
 };
 
 //{ Driver Code Starts.
