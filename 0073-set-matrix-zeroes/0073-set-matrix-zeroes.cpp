@@ -23,6 +23,9 @@ public:
         }
         
         
+        //row zero
+        
+        
         for(int i=0;i<rowsZero.size();i++)
         {
             int index= rowsZero[i];
@@ -32,7 +35,7 @@ public:
             }
         }
         
-        
+        //col zero
         
          for(int i=0;i< colZero.size();i++)
         {
